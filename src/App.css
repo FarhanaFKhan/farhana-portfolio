@@ -25,7 +25,13 @@
     }
   }
 
-  
+  .modal-links{
+   display:flex;
+   justify-content: space-around;
+  }
+.modal-links a{
+  color:black;
+} 
 
 
 
@@ -105,6 +111,24 @@
     transform: rotateY(180deg);
   }
   
+  @media (max-width:768px){
+    .flip-card{
+      margin-left: 50px;
+    }
+  }
+
+  @media (max-width:500px){
+    .flip-card{
+      margin-left: 15px;
+      width:375px;
+      height: 225px;
+    }
+  
+    .flip-card-front img{
+      width:375px;
+      height:225px;
+    }
+  }
 
 
 

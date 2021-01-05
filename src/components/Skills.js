@@ -16,7 +16,7 @@ import git from '../assets/git.png';
 function Skills(){
     return (
         <Container>
-        <Row>
+        <StyledRow>
             <Col>
             <Heading>My Skills</Heading>
             <Content>
@@ -52,7 +52,7 @@ function Skills(){
             </SkillsBox>
 
             </Col>
-        </Row>            
+        </StyledRow>            
         </Container>
     )
 }
@@ -68,9 +68,17 @@ const Heading = styled.h2`
   text-align:center;
   letter-spacing: 2px;
 `
-
+const StyledRow = styled(Row) `
+ display:flex;
+ @media (max-width:768px){
+     display: block;
+ }
+`
 const Content = styled.div`
 padding-left: 50px;
+@media(max-width:768px){
+    padding-left:0px;
+}
 `;
 
 const ListElement = styled.li `

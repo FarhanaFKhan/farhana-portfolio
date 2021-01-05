@@ -9,7 +9,7 @@ function About(){
     return (
         <div>
             <Container>
-                <Row>
+                <StyledRow>
                     <Col><Heading>About Me</Heading>
                     <div>
 
@@ -29,7 +29,7 @@ function About(){
                     <Col><ProfilePicture src={profile}  alt="farhana's profile"/>
                     {/* <img  src={profile}  alt="farhana's profile"/> */}
                     </Col>
-                </Row>
+                </StyledRow>
   
             </Container>
         </div>
@@ -47,10 +47,19 @@ const Heading = styled.h2`
   text-align:center;
   letter-spacing: 2px;
 `
+const StyledRow = styled(Row) `
+ display:flex;
+ @media (max-width:768px){
+     display: block;
+ }`
 
 const ProfilePicture = styled.img `
 margin-top:55px;
 ${'' /* margin-left: 100px; */}
 float:right;
 height:430px;
+@media (max-width:768px){
+  margin-left: 0px;
+  margin-right: auto;
+}
 `
