@@ -110,7 +110,7 @@ function Projects(){
           <h6>Summary</h6>    
           <p>A TV shows episode guide using javascript DOM manupulation</p>
           <p><strong>Tech Stack:</strong> JavaScript, HTML, CSS</p>    
-          <div class="modal-links">
+          <div className="modal-links">
           <a href="https://cyf-farhanafkhan-tv.netlify.app/" target="_blank" rel="noopener noreferrer"><strong>Demo</strong></a>
           <a href="https://github.com/FarhanaFKhan/tv-show-dom-project" target="_blank" rel="noopener noreferrer"><strong>GitHub Repo</strong></a>
           </div>

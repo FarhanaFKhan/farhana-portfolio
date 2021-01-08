@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col,Image } from 'react-bootstrap';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 import profile from '../assets/profile-picture.jpeg';
 
 
@@ -9,6 +10,7 @@ function About(){
     return (
         <div>
             <Container>
+            <Fade top>
                 <StyledRow>
                     <Col><Heading>About Me</Heading>
                     <div>
@@ -26,10 +28,10 @@ function About(){
                         I love to <strong>read</strong> in my spare time.</p>
                     </div>
                     </Col>
-                    <Col><ProfilePicture src={profile}  alt="farhana's profile"/>
-                    {/* <img  src={profile}  alt="farhana's profile"/> */}
+                    <Col><ProfilePicture src={profile}  alt="farhana's profile" fluid/>
                     </Col>
                 </StyledRow>
+                </Fade>
   
             </Container>
         </div>
@@ -42,24 +44,33 @@ function About(){
 
 export default About;
 
-const Heading = styled.h2`
-  margin-bottom: 20px;
+const Heading = styled.h2 `
+  margin-top: 10vh;
+  margin-bottom: 5vh;
   text-align:center;
   letter-spacing: 2px;
 `
 const StyledRow = styled(Row) `
- display:flex;
- @media (max-width:768px){
-     display: block;
- }`
+    display: block;
+    margin-left:2rem;
+    @media (min-width:769px){
+        display:flex;
+        font-size: 1em;
+    }
+    
+`
 
-const ProfilePicture = styled.img `
-margin-top:55px;
-${'' /* margin-left: 100px; */}
-float:right;
-height:430px;
-@media (max-width:768px){
-  margin-left: 0px;
-  margin-right: auto;
+const ProfilePicture = styled(Image) `
+    margin-top:10rem;
+    ${'' /* height:25rem; */}
+@media (min-width:767px){
+    margin-left: 10rem;
+    margin-top: 5rem;
+    height:20rem;
+
+}
+@media (min-width:1000px){
+    height:25rem;
+    margin-top:10rem;
 }
 `

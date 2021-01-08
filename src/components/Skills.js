@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Image } from 'react-bootstrap'
 import styled from 'styled-components';
 import html from '../assets/html.png';
 import css from '../assets/css.png';
@@ -12,14 +12,36 @@ import styledC from '../assets/styled.png';
 import node from '../assets/node.png';
 import sql from '../assets/postgreSQL.png';
 import git from '../assets/git.png';
+import Fade from 'react-reveal/Fade';
 
 function Skills(){
     return (
         <Container>
+        <Fade top>
         <StyledRow>
             <Col>
             <Heading>My Skills</Heading>
+            <TechHeading>Technical skills:</TechHeading>
+            <SkillsBox>
+                <TechImg  src={html} alt="html logo" fluid/>
+                <TechImg  src={css} alt="csslogo" fluid />
+                <TechImg  src={js} alt="jS logo" fluid/>
+                <TechImg  src={bootstrap} alt="bootstrap logo" fluid />
+                <TechImg  src={styledC} alt="styled components logo" fluid />                
+                <TechImg  src={github} alt="github logo" fluid />
+                
+                <TechImg  src={react} alt="react logo" fluid/>
+                <TechImg  src={reactB} alt="reactBootstrap logo" fluid />
+                
+                <TechImg  src={node} alt="node logo" fluid />
+                <TechImg  src={sql} alt="postgreSQL logo" fluid />
+                <TechImg  src={git} alt="git logo" fluid />
+            </SkillsBox>                           
+            </Col>
+
+            <Col>
             <Content>
+            <TechHeading>Transferrable Skills:</TechHeading> 
             <ul>
                 <ListElement><strong>Organisational skills:</strong> I have always been well organised and managed time efficiently throughout my education and professional years.<br/>
                     My organisational skills helped me achieve a distinction in masters and, recently, helped me complete the eight-month long <a href ='https://syllabus.codeyourfuture.io/' target="_blank"
@@ -31,28 +53,11 @@ function Skills(){
                     <br/>I enjoy collaborating on different projects. During the CYF course, I collaborated, as part of different teams, on various projects and tasks.
                 </ListElement><br/>
             </ul>
-            </Content>                
+            </Content>
             </Col>
-            <Col>
-            <TechHeading>Technical skills:</TechHeading>
-            <SkillsBox>
-                <TechImg class="img-fluid" src={html} alt="html logo"/>
-                <TechImg class="img-fluid" src={css} alt="csslogo" />
-                <TechImg class="img-fluid" src={js} alt="jS logo" />
-                <TechImg class="img-fluid" src={bootstrap} alt="bootstrap logo" />
-                <TechImg class="img-fluid" src={styledC} alt="styled components logo" />                
-                <TechImg class="img-fluid" src={github} alt="github logo"  />
-                
-                <TechImg class="img-fluid" src={react} alt="react logo"/>
-                <TechImg class="img-fluid" src={reactB} alt="reactBootstrap logo" />
-                
-                <TechImg class="img-fluid" src={node} alt="node logo" />
-                <TechImg class="img-fluid" src={sql} alt="postgreSQL logo" />
-                <TechImg class="img-fluid" src={git} alt="git logo" />
-            </SkillsBox>
 
-            </Col>
-        </StyledRow>            
+        </StyledRow>    
+        </Fade>        
         </Container>
     )
 }
@@ -64,20 +69,24 @@ function Skills(){
 export default Skills;
 
 const Heading = styled.h2`
-  margin-bottom: 20px;
+  margin-top:10vh;
+  margin-bottom: 5vh;
   text-align:center;
   letter-spacing: 2px;
 `
 const StyledRow = styled(Row) `
- display:flex;
- @media (max-width:768px){
-     display: block;
+ display: block;
+ 
+ @media (min-width:768px){
+    display:flex; 
+    font-size: 1em;
  }
 `
 const Content = styled.div`
-padding-left: 50px;
-@media(max-width:768px){
-    padding-left:0px;
+    margin-top:5vh;
+@media(min-width:768px){
+    margin-top:19vh;
+    margin-left:5rem;
 }
 `;
 
@@ -86,17 +95,18 @@ const ListElement = styled.li `
 `;
 
 const TechHeading= styled.h5 `
-  margin-top:50px;
+  margin-top:5vh;
 `
-const TechImg = styled.img `
+const TechImg = styled(Image) `
  height:90px;
  width: 90px;
  margin:10px 0px 10px 10px;
 `
 
 const SkillsBox = styled.div `
-  float:right;   
-  margin-top: 20px;
+  ${'' /* float:right;    */}
+  margin-top: 2vh;
+  margin-bottom: 5vh;
   display: flex;
   flex-wrap: wrap;
   ${'' /* justify-content:space-between; */}
