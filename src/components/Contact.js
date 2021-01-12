@@ -8,10 +8,12 @@ import githubLogo from '../assets/github-logo.png';
 import linkedinLogo from '../assets/linkedin.png';
 
 
+
 function Contact(){
     return (
         <Container>
            <Heading>Contact Me</Heading>
+           <SubLine>Hover on the card</SubLine>
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
@@ -47,15 +49,17 @@ function Contact(){
 export default Contact;
 
 const Heading = styled.h2`
-  margin-bottom: 20px;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
   text-align:center;
   letter-spacing: 2px;
+  margin-left:0rem;
 
   @media (max-width:768px){
    margin-left:100px;
   }
-  @media (max-width:500px){
-    margin-left:0px
-  }
+`
+const SubLine = styled.p `
+  text-align:center;
 `
 
