@@ -13,7 +13,7 @@ import '../App.css';
 function Projects(){  
 
     return (
-        <Container fluid>
+        <Container>
           <Heading>Projects</Heading>            
           <SubLine>Click on the image to see the project description</SubLine> 
 
@@ -38,7 +38,7 @@ function Projects(){
           </Fade>
           <Fade bottom>
           <Project>
-            <Card>
+            <StyledCard>
               <Card.Img variant="top" src={projectPortfolio}/>
               <br/>
               <Card.Body>
@@ -54,13 +54,13 @@ function Projects(){
                 <Card.Link href="#">GitHub Repo</Card.Link>
                 <Card.Link href="#">Demo</Card.Link> 
               </Card.Body>
-            </Card>
+            </StyledCard>
             </Project>
             </Fade>
 
             <Fade top>  
             <Project>
-            <Card >
+            <StyledCard >
               <Card.Img variant="top" src={projectDom}/>
               <br/>
               <Card.Body>
@@ -75,13 +75,13 @@ function Projects(){
                 <Card.Link href="https://cyf-farhanafkhan-tv.netlify.app/" target="_blank" rel="noopener noreferrer">Demo</Card.Link>
               <Card.Link href="https://github.com/FarhanaFKhan/tv-show-dom-project" target="_blank" rel="noopener noreferrer">GitHub Repo</Card.Link> 
               </Card.Body>
-            </Card> 
+            </StyledCard> 
             </Project>
             </Fade>
 
             <Fade bottom>
             <Project>
-            <Card >
+            <StyledCard >
               <Card.Img variant="top" src={projectJournal}/>
               <br/>
               <Card.Body>
@@ -96,14 +96,14 @@ function Projects(){
                 <Card.Link href="https://htmlpreview.github.io/?https://github.com/FarhanaFKhan/Project-journal/blob/master/index.html" target="_blank" rel="noopener noreferrer">Demo</Card.Link>
                 <Card.Link href="https://github.com/FarhanaFKhan/Project-journal" target="_blank" rel="noopener noreferrer">GitHub Repo</Card.Link> 
               </Card.Body>
-            </Card>
+            </StyledCard>
             </Project>
             </Fade>
 
             <Fade top>
 
             <Project>
-            <Card style={{ width: '18rem' }}>
+            <StyledCard>
               <Card.Img variant="top" src={projectBlog}/>
               <br/>
               <Card.Body>
@@ -119,7 +119,7 @@ function Projects(){
                 <Card.Link href="https://htmlpreview.github.io/?https://github.com/FarhanaFKhan/html-css-project/blob/master/index.html" target="_blank" rel="noopener noreferrer">Demo</Card.Link>
               <Card.Link href="https://github.com/FarhanaFKhan/html-css-project" target="_blank" rel="noopener noreferrer">GitHub Repo</Card.Link> 
               </Card.Body>
-            </Card>
+            </StyledCard>
             </Project>    
             </Fade>                     
 
