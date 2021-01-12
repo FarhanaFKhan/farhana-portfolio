@@ -51,8 +51,8 @@ function Projects(){
                   <p><strong>Tech Stack:</strong> React, ReactBootstrap</p>
                 </Card.Text>   
                 <br/>                
-                <Card.Link href="#">GitHub Repo</Card.Link>
-                <Card.Link href="#">Demo</Card.Link> 
+                <Card.Link href="https://farhana-khan-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">GitHub Repo</Card.Link>
+                <Card.Link href="https://github.com/FarhanaFKhan/farhana-portfolio" target="_blank" rel="noopener noreferrer">Demo</Card.Link> 
               </Card.Body>
             </StyledCard>
             </Project>
